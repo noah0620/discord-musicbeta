@@ -1,0 +1,10 @@
+import dotenv from 'dotenv';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {startMusicBot} from './music-bot.js';
+const __dirname=path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({path:path.resolve(__dirname,'../.env')});
+const token=(process.env.DISCORD_TOKEN||process.env.MUSIC_BOT_TOKEN_1||'').trim();
+if(!token)throw new Error('.env に DISCORD_TOKEN を設定してください。');
+startMusicBot(token,'Music BOT 1');
+console.log('🎵 Music BOT 1 を1台だけ起動します。');
