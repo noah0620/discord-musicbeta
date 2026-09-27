@@ -16,3 +16,7 @@ ZIPの中身をGitHubリポジトリ直下へ配置し、Railway Variablesに `D
 
 ## YouTubeについて
 検索と動画情報はplay-dl、再生直前の音声URL取得はyt-dlpを使用します。YouTube側のbot判定/403/ログイン要求はサービス側の制限なので、コードだけで常に回避できる保証はありません。cookies.txtはGitHubへコミットしないでください。
+
+
+## 公開BOT版
+この版はグローバルコマンド専用です。GUILD_IDは不要です。`npm run deploy` で全導入サーバー向けに登録します。
